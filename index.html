@@ -22,7 +22,7 @@
         <b>Try it free 7 days</b> then $20/mo. thereafter<br>
       </div>
       <div class="form">
-        <form>  
+        <form id = "theform" name= "myform">  
           <input type="text" placeholder=" First Name" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);"><br><br>
           <input type="text" placeholder=" Last Name" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);"><br><br>
           <input type="email" placeholder=" Email address" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);"><br><br>
@@ -31,7 +31,21 @@
           <p>By clicking the button you are agreeing to our <a href="#">Terms and Services</a></p><br>
         </form>
       </div>
-
+      <div id= "message"></div>
     </div>
+   <script>
+      var myForm = document.forms.myform
+      var message = document. getElementsBy("message");
+      
+      myForm.onsubmit=function(){
+         if(myForm.FirstName.value == ""){
+            message.innerHTML = "Please enter your first name";
+            return false;
+         }else{
+            message.innerHTML = "";
+            return true;
+         }
+      }
+   </script>
   </body>
 </html>
