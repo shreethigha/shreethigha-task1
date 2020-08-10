@@ -93,9 +93,10 @@
         display: inline-block;
       }
 
-      #message{
-            font-color: red;
-      }
+      validation{
+            font-weight:bold;
+            color:red;
+            font-size:12px;
       
       @media only screen and (max-width: 787px){
         body{
