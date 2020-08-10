@@ -23,26 +23,13 @@
       </div>
       <div class="form">
         <form id = "theform" name= "myform"> 
-           <div class="formula">
           <input type="text" id=firstname placeholder=" First Name" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
-           <img src="icon-error.svg" alt="error-icon"/>
-          <small></small><br><br>
-           </div>
-           <div class="formula">
+           <br><br>
           <input type="text" id=lastname placeholder=" Last Name" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
-           <img src="icon-error.svg" alt="error-icon"/>
-          <small></small><br><br>
-              </div>
-           <div class="formula">
+           <br><br>
           <input type="email" id=email placeholder=" Email address" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
-           <img src="icon-error.svg" alt="error-icon"/>
-          <small></small><br><br>
-              </div>
-           <div class="formula">
+           <br><br>
           <input type="password" id=password placeholder=" Password" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
-           <img src="icon-error.svg" alt="error-icon"/>
-          <small></small>
-              </div>
           <button type="submit" class="button">CLAIM YOUR FREE TRAIL</button>
           <p>By clicking the button you are agreeing to our <a href="#">Terms and Services</a></p><br>
         </form>
@@ -50,56 +37,7 @@
       <div id= "message"></div>
     </div>
    <script>
-      
-      const form = document.getElementById('theform');
-
-form.addEventListener('submit', e=>{
-    e.preventDefault();
-    const firstName=form['firstname'].value;
-    const lastName=form['lastname'].value;
-    const email=form['email'].value;
-    const password=form['password'].value;
-
-    if(firstName === ''){
-        addErrorTo('firstname','First Name cannot be empty');
-    } else{
-        removeErrorFrom('firstname');
-    }
-   
-    if(lastName === ''){
-        addErrorTo('lastname','Last Name cannot be empty');
-    } else{
-        removeErrorFrom('lastname');
-    }
-
-    if(email === ''){
-        addErrorTo('email','Email is required');
-    } else{
-        removeErrorFrom('email');
-    }
-
-    if(password === ''){
-        addErrorTo('password','Password cannot be empty');
-    } else{
-        removeErrorFrom('password');
-    }
-
-});
-
-function addErrorTo(field, message){
-    const formula = form[field].parentNode;
-    formula.classList.add('error');
-    const small = formula.querySelector('small');
-    small.innerText = message;
-   
-}
-
-function removeErrorFrom(field){
-    const formula = form[field].parentNode;
-    formula.classList.remove('error');
-   
-}
-      
+     
    </script>
   </body>
 </html>
