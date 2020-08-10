@@ -93,50 +93,6 @@
         display: inline-block;
       }
 
-
-.formula{
-    position: relative;
-    margin-bottom: 30px;
-
-}
-
-.formula small{
-    color: hsl(0, 100%, 74%);
-    font-weight: 600;
-    position: absolute;
-    bottom: -24px;
-    right: 0;
-    opacity: 0;
-    text-align: right;
-}
-
-.formula.error input{
-    border-color: hsl(0, 100%, 74%);
-    color: hsl(0, 100%, 74%);
-}
-
-.formula.error input::placeholder{
-    color: hsl(0, 100%, 74%);
-}
-
-.formula img{
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateX(-50%);
-    right: 15px;
-    height: 20px;
-
-}
-
-.formula.error img{
-    opacity: 1;
-}
-
-input:focus{
-    border: 1.2px solid hsl(248, 32%, 51%);
-    outline: none;
-}
       
       @media only screen and (max-width: 787px){
         body{
