@@ -23,14 +23,10 @@
       </div>
       <div class="form">
         <form id = "theform" name= "myform">  
-          <input type="text" id=firstname placeholder=" First Name" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
-           <img src="icon-error.svg" alt="error-icon"/><small></small><br><br>
-          <input type="text" id=lastname placeholder=" Last Name" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
-           <img src="icon-error.svg" alt="error-icon"/><small></small><br><br>
-          <input type="email" id=email placeholder=" Email address" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
-           <img src="icon-error.svg" alt="error-icon"/><small></small><br><br>
+          <input type="text" id=firstname placeholder=" First Name" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);"><br><br>
+          <input type="text" id=lastname placeholder=" Last Name" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);"><br><br>
+          <input type="email" id=email placeholder=" Email address" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);"><br><br>
           <input type="password" id=password placeholder=" Password" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
-           <img src="icon-error.svg" alt="error-icon"/><small></small>
           <button type="submit" class="button">CLAIM YOUR FREE TRAIL</button>
           <p>By clicking the button you are agreeing to our <a href="#">Terms and Services</a></p><br>
         </form>
@@ -38,59 +34,42 @@
       <div id= "message"></div>
     </div>
    <script>
-      const form = document.getElementById('form');
-
-form.addEventListener('submit', e=>{
-    e.preventDefault();
-    const firstName=form['firstname'].value;
-    const lastName=form['lastname'].value;
-    const email=form['email'].value;
-    const password=form['password'].value;
-
-    if(firstName === ''){
-        addErrorTo('firstname','First Name cannot be empty');
-    } else{
-        removeErrorFrom('firstname');
-    }
+     function GEEKFORGEEKS()                                    
+{ 
+    var name = document.forms["myform"]["First Name"];               
+    var email = document.forms["myform"]["Last Name"];    
+    var phone = document.forms["myform"]["Email address"];
+    var password = document.forms["myform"]["Password"];  
    
-    if(lastName === ''){
-        addErrorTo('lastname','Last Name cannot be empty');
-    } else{
-        removeErrorFrom('lastname');
-    }
-
-    if(email === ''){
-        addErrorTo('email','Email is required');
-    } else if(!isValid(email)){
-        addErrorTo('email','looks like this is not an email');
-    } else{
-        removeErrorFrom('email');
-    }
-
-    if(password === ''){
-        addErrorTo('password','Password cannot be empty');
-    } else{
-        removeErrorFrom('password');
-    }
-
-});
-
-function addErrorTo(field, message){
-    const formControl = form[field].parentNode;
-    formControl.classList.add('error');
-    const small = formControl.querySelector('small');
-    small.innerText = message;
+    if (firstname.value == "")                                  
+    { 
+        window.alert("Please enter your first name."); 
+        name.focus(); 
+        return false; 
+    } 
    
-}
-
-function removeErrorFrom(field){
-    const formControl = form[field].parentNode;
-    formControl.classList.remove('error');
+    if (lastname.value == "")                               
+    { 
+        window.alert("Please enter your last name."); 
+        address.focus(); 
+        return false; 
+    } 
+       
+    if (email.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
    
-}
-function isValid(email) {
-    var re =  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return re.test(String(email).toLowerCase());
+    if (password.value == "")                           
+    { 
+        window.alert("Please enter a password."); 
+        phone.focus(); 
+        return false; 
+    } 
+   
+    return true; 
 }
    </script>
   </body>
