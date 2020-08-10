@@ -23,10 +23,14 @@
       </div>
       <div class="form">
         <form id = "theform" name= "myform">  
-          <input type="text" placeholder=" First Name" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);"><br><br>
-          <input type="text" placeholder=" Last Name" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);"><br><br>
-          <input type="email" placeholder=" Email address" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);"><br><br>
-          <input type="password" placeholder=" Password" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
+          <input type="text" id=firstname placeholder=" First Name" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
+           <img src="./images/icon-error.svg" alt="error-icon"/><br><br>
+          <input type="text" id=lastname placeholder=" Last Name" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
+           <img src="./images/icon-error.svg" alt="error-icon"/><br><br>
+          <input type="email" id=email placeholder=" Email address" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
+           <img src="./images/icon-error.svg" alt="error-icon"/><br><br>
+          <input type="password" id=password placeholder=" Password" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
+           <img src="./images/icon-error.svg" alt="error-icon"/>
           <button type="submit" class="button">CLAIM YOUR FREE TRAIL</button>
           <p>By clicking the button you are agreeing to our <a href="#">Terms and Services</a></p><br>
         </form>
@@ -35,17 +39,43 @@
     </div>
    <script>
       var myForm = document.forms.myform
-      var message = document. getElementsBy("message");
+      var message = document. getElementsBy("form");
       
       myForm.onsubmit=function(){
-         if(myForm.FirstName.value == ""){
+         if(myForm.firstname.value === ""){
             message.innerHTML = "Please enter your first name";
             return false;
          }else{
             message.innerHTML = "";
             return true;
          }
+         
+         if(myForm.lastname.value === ""){
+            message.innerHTML = "Please enter your last name";
+            return false;
+         }else{
+            message.innerHTML = "";
+            return true;
+         }
+         
+         if(myForm.email.value === ""){
+            message.innerHTML = "Please enter your email address";
+            return false;
+         }else{
+            message.innerHTML = "";
+            return true;
+         }
+         
+         if(myForm.password.value === ""){
+            message.innerHTML = "Please enter a password";
+            return false;
+         }else{
+            message.innerHTML = "";
+            return true;
+         }
       };
+      
+      
    </script>
   </body>
 </html>
