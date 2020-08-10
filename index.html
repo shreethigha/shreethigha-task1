@@ -22,19 +22,27 @@
         <b>Try it free 7 days</b> then $20/mo. thereafter<br>
       </div>
       <div class="form">
-        <form id = "theform" name= "myform">  
+        <form id = "theform" name= "myform"> 
+           <div class="formula">
           <input type="text" id=firstname placeholder=" First Name" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
            <img src="icon-error.svg" alt="error-icon"/>
           <small></small><br><br>
+           </div>
+           <div class="formula">
           <input type="text" id=lastname placeholder=" Last Name" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
            <img src="icon-error.svg" alt="error-icon"/>
           <small></small><br><br>
+              </div>
+           <div class="formula">
           <input type="email" id=email placeholder=" Email address" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
            <img src="icon-error.svg" alt="error-icon"/>
           <small></small><br><br>
+              </div>
+           <div class="formula">
           <input type="password" id=password placeholder=" Password" style="align: center; border: 0.5px solid hsl(246, 25%, 77%);">
            <img src="icon-error.svg" alt="error-icon"/>
           <small></small>
+              </div>
           <button type="submit" class="button">CLAIM YOUR FREE TRAIL</button>
           <p>By clicking the button you are agreeing to our <a href="#">Terms and Services</a></p><br>
         </form>
@@ -79,16 +87,16 @@ form.addEventListener('submit', e=>{
 });
 
 function addErrorTo(field, message){
-    const formControl = form[field].parentNode;
-    formControl.classList.add('error');
-    const small = formControl.querySelector('small');
+    const formula = form[field].parentNode;
+    formula.classList.add('error');
+    const small = formula.querySelector('small');
     small.innerText = message;
    
 }
 
 function removeErrorFrom(field){
-    const formControl = form[field].parentNode;
-    formControl.classList.remove('error');
+    const formula = form[field].parentNode;
+    formula.classList.remove('error');
    
 }
       
